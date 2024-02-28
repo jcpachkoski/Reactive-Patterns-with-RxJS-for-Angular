@@ -16,6 +16,7 @@ export class RecipesListComponent implements OnInit {
   }
 
   recipes$ = this.service.recipes$;
+  
   /* The readonly stream */
   filterRecipesAction$ = this.service.filterRecipesAction$;
   filteredRecipes$ = combineLatest([this.recipes$, this.filterRecipesAction$]).pipe(

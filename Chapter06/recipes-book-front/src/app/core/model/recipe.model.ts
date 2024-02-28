@@ -11,4 +11,3 @@ export interface Recipe {
     rating?:number;
     category?:string;
 }
-
