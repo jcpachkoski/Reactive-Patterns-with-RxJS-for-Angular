@@ -9,6 +9,8 @@ import { RecipesService } from '../core/services/recipes.service';
 })
 export class RecipesFilterComponent implements OnInit {
 
+  constructor(private service: RecipesService, private fb: FormBuilder) { }
+
   recipeForm = this.fb.group({
     title: [''],
     category: [''],
@@ -17,8 +19,6 @@ export class RecipesFilterComponent implements OnInit {
     prepTime: [''],
     cookingTime: [''],
   });
-
-  constructor(private service: RecipesService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }

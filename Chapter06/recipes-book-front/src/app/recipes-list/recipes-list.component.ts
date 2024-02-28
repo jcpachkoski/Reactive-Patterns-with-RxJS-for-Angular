@@ -12,6 +12,9 @@ import { combineLatest } from 'rxjs';
 })
 export class RecipesListComponent implements OnInit {
 
+  constructor(private service: RecipesService) {
+  }
+
   recipes$ = this.service.recipes$;
   /* The readonly stream */
   filterRecipesAction$ = this.service.filterRecipesAction$;
@@ -21,9 +24,6 @@ export class RecipesListComponent implements OnInit {
       .indexOf(filter?.title?.toLowerCase() ?? '') != -1)
     })
   );
-
-  constructor(private service: RecipesService) {
-  }
 
   ngOnInit(): void {
   }
