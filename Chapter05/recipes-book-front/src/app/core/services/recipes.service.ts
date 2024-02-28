@@ -10,9 +10,9 @@ const BASE_PATH = environment.basePath
 })
 
 export class RecipesService {
+  
+  constructor(private http: HttpClient) { }
 
   recipes$ = this.http.get<Recipe[]>(`${BASE_PATH}/recipes`).pipe(
     catchError(error => of([])));
-
-  constructor(private http: HttpClient) { }
 }
