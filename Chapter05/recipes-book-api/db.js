@@ -4,5 +4,4 @@ const recipes = require('./db-json/recipes.json');
 module.exports = {
     ...db,
     ...recipes
-  
 }
