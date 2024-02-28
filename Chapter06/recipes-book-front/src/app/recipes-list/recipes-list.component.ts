@@ -35,9 +35,8 @@ export class RecipesListComponent implements OnInit {
   onCancelRating(recipe: Recipe) {
     console.log(recipe)
   }
+
   editRecipe(recipe: Recipe) {
     console.log(recipe)
   }
-
-
 }
