@@ -9,5 +9,5 @@ server.get('/api/recipes', (req, res) => {
 })
 
 server.listen(3001, () => {
-  console.log('Run Auth API Server')
+  console.log('Server with API running on Port 3001')
 })
