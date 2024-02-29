@@ -13,7 +13,6 @@ export class RecipeCreationComponent implements OnInit{
 
   constructor(private formBuilder: FormBuilder, private service: RecipesService) { }
 
-
   ngOnInit(): void {
   }
 
@@ -28,17 +27,16 @@ export class RecipeCreationComponent implements OnInit{
     prepTime: [''],
     steps: ['']
   });
+
   tags = recipeTags.TAGS;
+  
   valueChanges$ = this.recipeForm.valueChanges.pipe(
     concatMap(formValue => this.service.saveRecipe(formValue)),
     catchError(errors => of(errors)),
     tap(result=>this.saveSuccess(result))
   );
 
-
   saveSuccess(result: any) {
     console.log('Saved successfully');
   }
-
-
 }

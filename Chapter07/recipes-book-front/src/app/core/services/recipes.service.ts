@@ -24,7 +24,4 @@ export class RecipesService {
   saveRecipe(formValue: Recipe): Observable<Recipe> {
     return this.http.post<Recipe>(`${BASE_PATH}/recipes/save`, formValue);
   }
-
-
 }
-

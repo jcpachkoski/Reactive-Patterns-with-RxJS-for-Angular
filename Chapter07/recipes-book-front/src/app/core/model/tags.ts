@@ -3,5 +3,4 @@ export const TAGS = [{ name: 'Dinner', key: 'Dinner' },
 { name: 'Italian', key: 'Italian' },
 { name: 'Lunch', key: 'Lunch' },
 { name: 'Breakfast', key: 'Breakfast' },
-
 ];
