@@ -11,6 +11,4 @@ export interface Recipe {
     steps?: string;
     rating?:number;
     category?:string;
-
 }
-

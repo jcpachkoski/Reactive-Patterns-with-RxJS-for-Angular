@@ -14,6 +14,6 @@ server.post('/api/recipes/save', (req, res) => {
 })
 
 server.listen(3001, () => {
-  console.log('Run Auth API Server')
+  console.log('Running API Server on port 3001')
 })
 

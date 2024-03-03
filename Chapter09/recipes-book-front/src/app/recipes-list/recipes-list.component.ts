@@ -13,18 +13,19 @@ import { Router } from '@angular/router';
 })
 export class RecipesListComponent implements OnInit {
 
+  constructor(private service: RecipesService, private router: Router) { }
+
   recipes$ = this.service.recipes$;
+
   /* The readonly stream */
   filterRecipesAction$ = this.service.filterRecipesAction$;
-  filtredRecipes$ = combineLatest([this.recipes$, this.filterRecipesAction$]).pipe(
+
+  filteredRecipes$ = combineLatest([this.recipes$, this.filterRecipesAction$]).pipe(
     map(([recipes, filter]: [Recipe[], Recipe]) => {
       return recipes.filter(recipe => recipe.title?.toLowerCase()
       .indexOf(filter?.title?.toLowerCase() ?? '') != -1)
     })
   );
-
-  constructor(private service: RecipesService, private router: Router) {
-  }
 
   ngOnInit(): void {
   }
@@ -36,5 +37,4 @@ export class RecipesListComponent implements OnInit {
   onCancelRating(recipe: Recipe) {
     console.log(recipe)
   }
-
 }

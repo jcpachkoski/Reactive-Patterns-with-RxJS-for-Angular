@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: 'recipes/create', component: RecipeCreationComponent},
   { path: '', component: HomeComponent  }
-
 ];
 
 @NgModule({
