@@ -11,9 +11,7 @@ export class HeaderComponent implements OnInit {
   selectedRecipe$ = this.sharedService.selectedRecipeAction$;
 
   ngOnInit(): void {
-
   }
-
 }
 
 

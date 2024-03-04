@@ -7,12 +7,12 @@ import { Recipe } from '../model/recipe.model';
 })
 export class SharedDataService {
 
+  constructor() { }
+
   private selectedRecipeSubject = new BehaviorSubject<Recipe>({});
   selectedRecipeAction$ = this.selectedRecipeSubject.asObservable();
 
   updateSelectedRecipe(recipe: Recipe) {
     this.selectedRecipeSubject.next(recipe);
   }
-
-  constructor() { }
 }

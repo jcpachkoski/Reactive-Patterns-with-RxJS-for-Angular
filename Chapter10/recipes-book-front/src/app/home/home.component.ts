@@ -8,11 +8,11 @@ import {Component, OnDestroy, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit, OnDestroy {
 
   constructor() { }
+
   ngOnDestroy(): void {
     console.log('Home destroyed');
   }
 
   ngOnInit(): void {
   }
-
 }
