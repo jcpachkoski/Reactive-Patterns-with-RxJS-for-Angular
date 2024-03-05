@@ -12,7 +12,7 @@ import { UploadRecipesPreviewService } from '../core/services/upload-recipes-pre
 })
 export class RecipeCreationComponent {
 
-  constructor(private formBuilder: FormBuilder, private service: RecipesService) { }
+  constructor(private formBuilder: FormBuilder, private service: RecipesService, private uploadService: UploadRecipesPreviewService) { }
 
   counter: number = 0;
   uploadProgress: number = 0;
@@ -51,7 +51,7 @@ export class RecipeCreationComponent {
         finalize(() => this.calculateProgressPercentage(++this.counter, uploadedFiles.length))
       ))))
   )
-  
+
   saveSuccess(result: any) {
     console.log('Saved successfully');
   }
