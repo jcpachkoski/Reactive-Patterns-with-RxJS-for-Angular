@@ -1,4 +1,4 @@
-<div class="rp-data-view" *ngIf="filtredRecipes$ |async as recipes" class="card">
+<div class="rp-data-view" *ngIf="filteredRecipes$ | async as recipes" class="card">
     <p-dataView #dv [value]="recipes" [paginator]="true" [rows]="9" filterBy="name" layout="grid">
         <ng-template let-recipe pTemplate="gridItem">
             <div class="p-col-12 p-md-3">
