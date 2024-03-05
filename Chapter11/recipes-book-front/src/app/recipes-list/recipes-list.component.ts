@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { RecipesService } from '../core/services/recipes.service';
 import { Recipe } from '../core/model/recipe.model';
-import { catchError, map } from 'rxjs/operators';
-import { combineLatest, forkJoin, of } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { combineLatest } from 'rxjs';
 import { SharedDataService } from '../core/services/shared-data.service';
 import { Router } from '@angular/router';
 
@@ -37,7 +37,7 @@ export class RecipesListComponent implements OnInit {
   onCancelRating(recipe: Recipe) {
     console.log(recipe)
   }
-  
+
   editRecipe(recipe: Recipe) {
     this.sharedService.updateSelectedRecipe(recipe);
     this.router.navigate(['/recipes/details']);
