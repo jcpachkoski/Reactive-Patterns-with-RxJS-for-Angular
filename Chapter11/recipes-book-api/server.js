@@ -12,7 +12,10 @@ server.post('/api/recipes/save', (req, res) => {
   res.status(200).json(req.body)
 })
 
+server.post('/api/recipes/upload/:code', (req, res) => {
+  res.status(200).json(req.body)
+})
+
 server.listen(3001, () => {
   console.log('Running API Server on port 3001')
 })
-
