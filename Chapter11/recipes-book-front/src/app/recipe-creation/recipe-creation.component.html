@@ -8,15 +8,15 @@
       <input type="text" name="Title" formControlName="title">
     </div>
 
-    <div class=" col-3">
+    <div class="col-3">
       <label for="Ingredients">Ingredients</label>
       <input type="text" name="Ingredients" formControlName="ingredients">
     </div>
-    <div class=" col">
+    <div class="col">
       <i class="pi pi-plus" style="padding-top:40px; font-size: 1rem"></i>
     </div>
 
-    <div class=" col-4">
+    <div class="col-4">
       <label for="Tags">Tags</label>
       <div *ngFor="let tag of tags">
         <p-radioButton [inputId]="tag.key" [value]="tag" formControlName="tags"></p-radioButton>
@@ -24,7 +24,6 @@
       </div>
     </div>
   </div>
-
 
   <div class="form-row">
     <div class="col-4">
@@ -43,9 +42,7 @@
     </div>
   </div>
 
-
   <div class="form-row">
-
     <div class="col-12">
       <label for="steps">Steps</label>
       <textarea name="steps" formControlName="steps"></textarea>
