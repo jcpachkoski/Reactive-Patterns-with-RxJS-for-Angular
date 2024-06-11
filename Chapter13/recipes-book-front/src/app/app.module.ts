@@ -50,11 +50,10 @@ import { MessageService } from 'primeng/api';
     RatingModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     MenubarModule,
     RadioButtonModule,
     FileUploadModule
-
   ],
   providers: [RecipesService, MessageService],
   bootstrap: [AppComponent]
