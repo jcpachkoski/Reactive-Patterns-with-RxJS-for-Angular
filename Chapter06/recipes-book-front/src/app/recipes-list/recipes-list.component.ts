@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 // import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { RecipesService } from '../core/services/recipes.service';
 import { Recipe } from '../core/model/recipe.model';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { combineLatest } from 'rxjs';
 
 @Component({
@@ -17,16 +17,13 @@ export class RecipesListComponent implements OnInit {
   }
 
   recipes$ = this.service.recipes$;
-  
+
   /* The readonly stream */
   filterRecipesAction$ = this.service.filterRecipesAction$;
   filteredRecipes$ = combineLatest([this.recipes$, this.filterRecipesAction$]).pipe(
     map(([recipes, filter]: [Recipe[], Recipe]) => {
       return recipes.filter(recipe => recipe.title?.toLowerCase()
       .indexOf(filter?.title?.toLowerCase() ?? '') != -1)
-    }),
-    tap(filteredRecipe => {
-    	console.log('Filtered recipe is:' filteredRecipe);
     })
   );
 

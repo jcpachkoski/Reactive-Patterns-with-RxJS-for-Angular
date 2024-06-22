@@ -17,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { RecipesFilterComponent } from './recipes-filter/recipes-filter.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
