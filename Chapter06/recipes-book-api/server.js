@@ -9,6 +9,5 @@ server.get('/api/recipes', (req, res) => {
 })
 
 server.listen(3001, () => {
-  console.log('Running Server with API on Port 3001')
+  console.log('Server with API running on Port 3001')
 })
-

@@ -10,7 +10,7 @@ import { RecipesService } from '../core/services/recipes.service';
 export class RecipesListComponent implements OnInit {
 
   constructor(private service: RecipesService) { }
-  
+
   recipes$ = this.service.recipes$;
 
   ngOnInit(): void {
