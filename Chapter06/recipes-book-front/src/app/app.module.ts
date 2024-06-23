@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { HeaderComponent } from './core/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RecipesService } from './core/services/recipes.service';
+// import { RecipesService } from './core/services/recipes.service';
 import {DataViewModule} from 'primeng/dataview';
 import {ButtonModule} from 'primeng/button';
 import {PanelModule} from 'primeng/panel';
@@ -43,7 +43,8 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [RecipesService],
+  // providers: [RecipesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
