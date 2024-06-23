@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import { Recipe } from '../model/recipe.model';
 import { environment } from 'src/environments/environment';
+// import { catchError, of } from 'rxjs';
+
 const BASE_PATH = environment.basePath
 
 @Injectable({

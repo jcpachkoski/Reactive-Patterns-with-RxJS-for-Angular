@@ -13,8 +13,7 @@ import { combineLatest } from 'rxjs';
 })
 export class RecipesListComponent implements OnInit {
 
-  constructor(private service: RecipesService) {
-  }
+  constructor(private service: RecipesService) { }
 
   recipes$ = this.service.recipes$;
 
